@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Python
+alias python="python3"
+alias pip="pip3"
+alias plantuml="java -jar /usr/local/bin/plantuml/plantuml-1.2024.8.jar"
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -9,10 +14,9 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias d="cd ~/Library/CloudStorage/GoogleDrive-lukas.krodinger@gmail.com/Meine Ablage"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
 alias g="git"
 
 # Detect which `ls` flavor is in use
