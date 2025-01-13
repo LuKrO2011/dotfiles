@@ -1,5 +1,8 @@
-# Add `~/bin` and `~/.local/bin` to the `$PATH`
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH";
+# Add `~/bin` and `~/.local/bin` and python to the `$PATH`
+export PATH="$HOME/bin:$HOME/.local/bin:/opt/homebrew/bin/python3:$PATH";
+
+# Enable Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)";
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.

@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # Python
-alias python="python3"
+alias python='/opt/homebrew/bin/python3.13'
+alias python3='/opt/homebrew/bin/python3.13'
 alias pip="pip3"
 alias plantuml="java -jar /usr/local/bin/plantuml/plantuml-1.2024.8.jar"
 
