@@ -9,8 +9,12 @@ eval "$(/opt/homebrew/bin/brew shellenv)";
 # eval "$(pyenv init --path)"
 # eval "$(pyenv init -)"
 
-# Add GNOME keyring (for linux)
+# Add GNOME keyring (for linux) - not working
 # export SSH_AUTH_SOCK=/run/user/$(id -u)/keyring/ssh;
+
+# Add GPG keyring (for linux - working)
+# eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/fim_ligeti_github
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
