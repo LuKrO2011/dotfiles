@@ -204,3 +204,12 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# 'c' to cat with syntax highlighting using pygmentize
+function c() {
+	if [ -t 1 ]; then
+		pygmentize -f terminal256 -O style=native -g "$@" | less -R;
+	else
+		pygmentize -f terminal256 -O style=native -g "$@";
+	fi;
+}
