@@ -1,0 +1,32 @@
+[general]
+accounts = Gmail;, IMAPAccount
+
+[Account Gmail]
+localrepository = LocalGmail
+remoterepository = RemoteGmail
+
+[Repository LocalGmail]
+type = Maildir
+localfolders = ~/Mail/Gmail
+
+[Repository RemoteGmail]
+type = IMAP
+remotehost = imap.gmail.com
+remoteuser = lukas.krodinger@gmail.com
+ssl = yes
+remotepasseval = subprocess.check_output(["security", "find-generic-password", "-a", "lukas.krodinger@gmail.com", "-s", "offlineimap", "-w"]).strip()
+
+; [Account IMAPAccount]
+; localrepository = LocalIMAP
+; remoterepository = RemoteIMAP
+
+; [Repository LocalIMAP]
+; type = Maildir
+; localfolders = ~/Mail/IMAP
+
+; [Repository RemoteIMAP]
+; type = IMAP
+; remotehost = imap.your-imap-server.com
+; remoteuser = your-imap-username
+; ssl = yes
+; remotepass = your-imap-password
