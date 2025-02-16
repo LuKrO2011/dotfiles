@@ -1,5 +1,5 @@
 [general]
-accounts = Gmail, FIM
+accounts = Gmail
 
 [Account Gmail]
 localrepository = LocalGmail
@@ -18,18 +18,18 @@ sslcacertfile = /etc/ssl/cert.pem
 remotepasseval = __import__('getpass').getpass("Enter Gmail password: ")
 
 
-[Account FIM]
-localrepository = LocalFIM
-remoterepository = RemoteFIM
+; [Account ZIM]
+; localrepository = LocalZIM
+; remoterepository = RemoteZIM
 
-[Repository LocalFIM]
-type = Maildir
-localfolders = ~/Mail/FIM
+; [Repository LocalZIM]
+; type = Maildir
+; localfolders = ~/Mail/ZIM
 
-[Repository RemoteFIM]
-type = IMAP
-remotehost = email.uni-passau.de
-remoteuser = krodin03@ads.uni-passau.de
-ssl = yes
-sslcacertfile = /etc/ssl/cert.pem
-remotepass = __import__('getpass').getpass("Enter FIM password: ")
+; [Repository RemoteZIM]
+; type = IMAP
+; remotehost = email.uni-passau.de
+; remoteuser = krodin03@ads.uni-passau.de
+; ssl = yes
+; sslcacertfile = /etc/ssl/cert.pem
+; remotepass = __import__('getpass').getpass("Enter ZIM password: ")
