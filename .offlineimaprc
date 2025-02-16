@@ -1,5 +1,5 @@
 [general]
-accounts = Gmail;, IMAPAccount
+accounts = Gmail, FIM
 
 [Account Gmail]
 localrepository = LocalGmail
@@ -14,19 +14,22 @@ type = IMAP
 remotehost = imap.gmail.com
 remoteuser = lukas.krodinger@gmail.com
 ssl = yes
-remotepasseval = subprocess.check_output(["security", "find-generic-password", "-a", "lukas.krodinger@gmail.com", "-s", "offlineimap", "-w"]).strip()
+sslcacertfile = /etc/ssl/cert.pem
+remotepasseval = __import__('getpass').getpass("Enter Gmail password: ")
 
-; [Account IMAPAccount]
-; localrepository = LocalIMAP
-; remoterepository = RemoteIMAP
 
-; [Repository LocalIMAP]
-; type = Maildir
-; localfolders = ~/Mail/IMAP
+[Account FIM]
+localrepository = LocalFIM
+remoterepository = RemoteFIM
 
-; [Repository RemoteIMAP]
-; type = IMAP
-; remotehost = imap.your-imap-server.com
-; remoteuser = your-imap-username
-; ssl = yes
-; remotepass = your-imap-password
+[Repository LocalFIM]
+type = Maildir
+localfolders = ~/Mail/FIM
+
+[Repository RemoteFIM]
+type = IMAP
+remotehost = email.uni-passau.de
+remoteuser = krodin03@ads.uni-passau.de
+ssl = yes
+sslcacertfile = /etc/ssl/cert.pem
+remotepass = __import__('getpass').getpass("Enter FIM password: ")
