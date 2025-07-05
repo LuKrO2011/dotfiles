@@ -63,3 +63,14 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+# Pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# latexindent.pl
+export PATH="/usr/local/texlive/2025/bin/universal-darwin:$PATH"
+
+# Perl
+export PATH="/opt/homebrew/opt/perl/bin:$PATH"
